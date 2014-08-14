@@ -64,7 +64,7 @@
   (interactive)
   (insert (format-time-string "%a, %d %b %Y %H:%M:%S %z")))
 
-(load-file "packages.el")
+(load-file "~/.emacs.d/packages.el")
 
 (bbdb-initialize)
 
