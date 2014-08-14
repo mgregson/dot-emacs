@@ -64,76 +64,15 @@
   (interactive)
   (insert (format-time-string "%a, %d %b %Y %H:%M:%S %z")))
 
-(defun mg/ensure-packages (&rest packages)
-  "Ensure that each package in the given list of packages is installed."
-  (mapcar
-   (lambda (package)
-     (if (package-installed-p package)
-         nil
-       (package-install package)
-       (require package)))
-   packages))
-
-(require 'package)
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(package-initialize)
-(package-refresh-contents)
-(mg/ensure-packages
- 'bbdb
- 'org
- 'cl-lib
- 'tramp
- 'dropdown-list
- 'company
- 'magit
- 'org-magit
- 'eldoc
- 'cider
- 'cider-browse-ns
- 'sass-mode
- 'scala-mode
- 'sbt-mode
- 'json-mode
- 'gist
- 'gitconfig-mode
- 'gitignore-mode
- 'ess
- 'erc-hl-nicks
- 'thrift
- 'protobuf-mode
- 'org-eldoc
- 'c-eldoc
- 'css-eldoc
- 'nginx-mode
- 'flyspell
- 'flyspell-lazy
- 'company-c-headers
- 'company-ghc
- 'company-inf-python
- 'company-inf-ruby
- 'csv-mode
- 'csharp-mode
- 'dired-toggle
- 'dired-toggle-sudo
- 'haskell-mode
- 'clojure-mode
- 'company-cider
- 'company-ghc
- 'ghc
- 'ghci-completion
- 'flycheck
- 'flycheck-haskell
- 'flymake-easy
- 'flymake-haskell-multi)
+(load-file "packages.el")
 
 (bbdb-initialize)
 
 (setq
- diary-file "~/.org/diary"
+ diary-file "~/.emacs.d/org/diary"
  user-full-name "Michael Gregson"
- org-agenda-files '("~/.org/")
- org-default-notes-file "~/.org/refile.org"
+ org-agenda-files '("~/.emacs.d/org/")
+ org-default-notes-file "~/.emacs.d/org/refile.org"
  org-tags-column -110
  org-log-done 'time
  org-agenda-tags-column -110
