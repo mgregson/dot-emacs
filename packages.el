@@ -3,7 +3,7 @@
   (mapcar
    (lambda (package)
      (if (package-installed-p package)
-         nil
+         (require package)
        (package-install package)
        (require package)))
    packages))
