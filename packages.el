@@ -11,6 +11,50 @@
 (defvar mg/packages-python
   '())
 
+(defvar mg/packages-clojure
+  '(cider
+    cider-browse-ns
+    clojure-mode
+    company-cider))
+
+(defvar mg/packages-scala
+  '(scala-mode
+    sbt-mode))
+
+(defvar mg/packages-c
+  '(c-eldoc
+    company-c-headers))
+
+(defvar mg/packages-ops
+  '(erc-hl-nicks
+    nginx-mode))
+
+(defvar mg/packages-data
+  '(ess
+    csv-mode))
+
+(defvar mg/packages-idl
+  '(thrift
+    protobuf-mode))
+
+(defvar mg/packages-haskell
+  '(haskell-mode
+    ghc
+    ghci-completion
+    company-ghc
+    flycheck-haskell
+    flymake-haskell-multi))
+
+(defvar mg/packages-web
+  '(sass-mode
+    css-eldoc))
+
+(defvar mg/packages-ruby
+  '(company-inf-ruby))
+
+(defvar mg/packages-dotnet
+  '(csharp-mode))
+
 (defvar mg/packages-core
   '(bbdb
     org
@@ -29,58 +73,27 @@
     flyspell-lazy
     flycheck
     flymake-easy
-    csv-mode
     dired-toggle
-    dired-toggle-sudo))
+    dired-toggle-sudo
+    yaml-mode
+    json-mode))
 
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 (package-refresh-contents)
-(mg/ensure-packages
- 'bbdb
- 'org
- 'cl-lib
- 'tramp
- 'dropdown-list
- 'company
- 'magit
- 'org-magit
- 'eldoc
- 'cider
- 'cider-browse-ns
- 'sass-mode
- 'scala-mode
- 'sbt-mode
- 'json-mode
- 'gist
- 'gitconfig-mode
- 'gitignore-mode
- 'ess
- 'erc-hl-nicks
- 'thrift
- 'protobuf-mode
- 'org-eldoc
- 'c-eldoc
- 'css-eldoc
- 'nginx-mode
- 'flyspell
- 'flyspell-lazy
- 'company-c-headers
- 'company-ghc
- 'company-inf-ruby
- 'csv-mode
- 'csharp-mode
- 'dired-toggle
- 'dired-toggle-sudo
- 'haskell-mode
- 'clojure-mode
- 'company-cider
- 'company-ghc
- 'ghc
- 'ghci-completion
- 'flycheck
- 'flycheck-haskell
- 'flymake-easy
- 'flymake-haskell-multi)
+(apply 'mg/ensure-packages
+       (append
+        mg/packages-core
+        mg/packages-python
+        mg/packages-clojure
+        mg/packages-scala
+        mg/packages-c
+        mg/packages-idl
+        mg/packages-haskell
+        mg/packages-data
+        mg/packages-ops
+        mg/packages-ruby
+        mg/packages-dotnet
+        mg/packages-web))
