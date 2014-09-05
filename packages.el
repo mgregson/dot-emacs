@@ -77,7 +77,8 @@
     dired-toggle
     dired-toggle-sudo
     yaml-mode
-    json-mode))
+    json-mode
+    markdown-mode+))
 
 (require 'package)
 (add-to-list 'package-archives
