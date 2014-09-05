@@ -47,6 +47,7 @@
 
 (defvar mg/packages-web
   '(sass-mode
+    scss-mode
     css-eldoc))
 
 (defvar mg/packages-ruby
