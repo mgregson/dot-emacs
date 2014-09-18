@@ -11,6 +11,10 @@
 (defvar mg/packages-python
   '())
 
+(defvar mg/packages-php
+  '(php+-mode
+    php-mode))
+
 (defvar mg/packages-clojure
   '(cider
     cider-browse-ns
@@ -76,7 +80,8 @@
     dired-toggle
     dired-toggle-sudo
     yaml-mode
-    json-mode))
+    json-mode
+    el-get))
 
 (require 'package)
 (add-to-list 'package-archives
@@ -86,6 +91,7 @@
 (apply 'mg/ensure-packages
        (append
         mg/packages-core
+        mg/packages-php
         mg/packages-python
         mg/packages-clojure
         mg/packages-scala

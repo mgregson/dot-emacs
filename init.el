@@ -133,7 +133,7 @@
 (define-key company-active-map (kbd "TAB") nil)
 (define-key company-active-map (kbd "C-<down>") 'company-select-next)
 (define-key company-active-map (kbd "C-<up>") 'company-select-previous)
-(define-key company-active-map (kbd "<C-return>") 'company-complete-selection)
+(define-key company-active-map (kbd "C-<return>") 'company-complete-selection)
 
 (defun dka/sort-by-other-list (to-sort-list other-list)
   (let* ((index 0)
