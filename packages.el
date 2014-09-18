@@ -3,7 +3,7 @@
   (mapcar
    (lambda (package)
      (if (package-installed-p package)
-         nil
+         (require package)
        (package-install package)
        (require package)))
    packages))
@@ -51,6 +51,7 @@
 
 (defvar mg/packages-web
   '(sass-mode
+    scss-mode
     css-eldoc))
 
 (defvar mg/packages-ruby
@@ -81,7 +82,8 @@
     dired-toggle-sudo
     yaml-mode
     json-mode
-    el-get))
+    el-get
+    markdown-mode+))
 
 (require 'package)
 (add-to-list 'package-archives
