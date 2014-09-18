@@ -83,7 +83,8 @@
     yaml-mode
     json-mode
     el-get
-    markdown-mode+))
+    markdown-mode+
+    wanderlust))
 
 (require 'package)
 (add-to-list 'package-archives
