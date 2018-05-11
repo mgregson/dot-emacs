@@ -12,14 +12,11 @@
   '())
 
 (defvar mg/packages-php
-  '(php+-mode
-    php-mode))
+  '(php-mode))
 
 (defvar mg/packages-clojure
   '(cider
-    cider-browse-ns
-    clojure-mode
-    company-cider))
+    clojure-mode))
 
 (defvar mg/packages-scala
   '(scala-mode
@@ -65,15 +62,12 @@
     org
     cl-lib
     tramp
-    dropdown-list
     company
     magit
-    org-magit
     eldoc
     gist
     gitconfig-mode
     gitignore-mode
-    org-eldoc
     flyspell
     flyspell-lazy
     flycheck
@@ -83,14 +77,11 @@
     yaml-mode
     json-mode
     el-get
-    markdown-mode+
-    wanderlust))
+    markdown-mode+))
 
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(add-to-list 'package-archives
-             '("e6h" . "http://www.e6h.org/packages/"))
 (package-initialize)
 (package-refresh-contents)
 (apply 'mg/ensure-packages
