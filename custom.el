@@ -33,7 +33,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (css-eldoc scss-mode sass-mode csharp-mode company-inf-ruby nginx-mode erc-hl-nicks csv-mode ess flymake-haskell-multi flycheck-haskell company-ghc ghci-completion ghc haskell-mode protobuf-mode thrift company-c-headers c-eldoc sbt-mode scala-mode dropdown-list bbdb)))
+    (cider php-mode markdown-mode+ el-get json-mode yaml-mode dired-toggle-sudo dired-toggle flymake-easy flycheck flyspell-lazy gitignore-mode gitconfig-mode gist magit company css-eldoc scss-mode sass-mode csharp-mode company-inf-ruby nginx-mode erc-hl-nicks csv-mode ess flymake-haskell-multi flycheck-haskell company-ghc ghci-completion ghc haskell-mode protobuf-mode thrift company-c-headers c-eldoc sbt-mode scala-mode dropdown-list bbdb)))
  '(password-cache-expiry 300)
  '(running-xemacs f)
  '(safe-local-variable-values (quote ((js-indent-level . 2))))
