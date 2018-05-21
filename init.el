@@ -19,6 +19,7 @@
          "util.el"))
 
 (global-company-mode)
+(global-flycheck-mode)
 (define-key company-active-map (kbd "M-n") nil)
 (define-key company-active-map (kbd "M-p") nil)
 (define-key company-active-map (kbd "<up>") nil)
