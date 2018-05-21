@@ -57,6 +57,20 @@
 (defvar mg/packages-dotnet
   '(csharp-mode))
 
+(defvar mg/packages-ethereum
+  '(solidity-mode
+    flymake-solidity))
+
+(defvar mg/packages-go
+  '(go-mode
+    company-go
+    go-dlv
+    go-imports
+    go-add-tags
+    go-tag
+    flymake-go
+    golint))
+
 (defvar mg/packages-core
   '(bbdb
     org
@@ -97,4 +111,6 @@
         mg/packages-ops
         mg/packages-ruby
         mg/packages-dotnet
-        mg/packages-web))
+        mg/packages-web
+        mg/packages-ethereum
+        mg/packages-go))
