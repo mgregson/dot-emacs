@@ -1,5 +1,8 @@
+;;; packages --- manages packages I use
+;;; Commentary:
+;;; Code:
 (defun mg/ensure-packages (&rest packages)
-  "Ensure that each package in the given list of packages is installed."
+  "Ensure that each package in the given list of PACKAGES is installed."
   (mapcar
    (lambda (package)
      (if (package-installed-p package)
@@ -57,6 +60,23 @@
 (defvar mg/packages-dotnet
   '(csharp-mode))
 
+(defvar mg/packages-ethereum
+  '(solidity-mode
+    flymake-solidity))
+
+(defvar mg/packages-go
+  '(go-mode
+    company-go
+    go-dlv
+    go-imports
+    go-add-tags
+    go-tag
+    flymake-go
+    golint))
+
+(defvar mg/packages-javascript
+  '(js2-mode))
+
 (defvar mg/packages-core
   '(bbdb
     org
@@ -97,4 +117,10 @@
         mg/packages-ops
         mg/packages-ruby
         mg/packages-dotnet
-        mg/packages-web))
+        mg/packages-web
+        mg/packages-ethereum
+        mg/packages-go
+        mg/packages-javascript
+        ))
+(provide 'packages)
+;;; packages.el ends here
