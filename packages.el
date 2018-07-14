@@ -1,4 +1,4 @@
-;;; packages --- manages packages I use
+;;; Packages --- manages packages I use
 ;;; Commentary:
 ;;; Code:
 (defun mg/ensure-packages (&rest packages)
@@ -31,7 +31,8 @@
 
 (defvar mg/packages-ops
   '(erc-hl-nicks
-    nginx-mode))
+    nginx-mode
+    nix-mode))
 
 (defvar mg/packages-data
   '(ess
