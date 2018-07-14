@@ -65,7 +65,19 @@
         (setq-local flycheck-solium-checker-executable solium)
         (setq-local flycheck-solidity-checker-executable solc)))))
 
+(defun mg/eslint-paths-from-node-modules ()
+  "Configure eslint paths relative to the project directory (in node_modules)."
+  (let* ((root (locate-dominating-file
+                (or (buffer-file-name) default-directory)
+                "node_modules"))
+         (eslint (and root
+                    (expand-file-name "node_modules/.bin/eslint" root))))
+    (when (and eslint (file-executable-p eslint))
+      (progn
+        (setq-local flycheck-javascript-eslint-executable eslint)))))
+
 (add-hook 'flycheck-mode-hook #'mg/solidity-paths-from-node-modules)
+(add-hook 'flycheck-mode-hook #'mg/eslint-paths-from-node-modules)
 
 (provide 'init)
 ;;; init ends here
