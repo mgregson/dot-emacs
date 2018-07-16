@@ -32,6 +32,7 @@
      ("sun-jdk-1.5" . "/opt/sun-jdk-1.5.0.21")
      ("oracle-jdk-1.8" . "/opt/oracle-jdk-bin-1.8.0.5"))))
  '(js-indent-level 2)
+ '(js2-bounce-indent-p t)
  '(longlines-auto-wrap nil)
  '(make-backup-files nil)
  '(markdown-command "pandoc")
