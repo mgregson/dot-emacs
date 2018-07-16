@@ -104,25 +104,34 @@
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(package-refresh-contents)
-(apply 'mg/ensure-packages
-       (append
-        mg/packages-core
-        mg/packages-php
-        mg/packages-python
-        mg/packages-clojure
-        mg/packages-scala
-        mg/packages-c
-        mg/packages-idl
-        mg/packages-haskell
-        mg/packages-data
-        mg/packages-ops
-        mg/packages-ruby
-        mg/packages-dotnet
-        mg/packages-web
-        mg/packages-ethereum
-        mg/packages-go
-        mg/packages-javascript
-        ))
+
+(let ((last-load-file (expand-file-name "~/.emacs.d/.last-load.packages.el"))
+      (current-day (time-to-days (current-time))))
+  (progn
+    (if (or (not (file-exists-p last-load-file))
+            (< (time-to-days (nth 5 (file-attributes last-load-file))) current-day))
+        (progn
+          (package-refresh-contents)
+          (apply 'mg/ensure-packages
+                 (append
+                  mg/packages-core
+                  mg/packages-php
+                  mg/packages-python
+                  mg/packages-clojure
+                  mg/packages-scala
+                  mg/packages-c
+                  mg/packages-idl
+                  mg/packages-haskell
+                  mg/packages-data
+                  mg/packages-ops
+                  mg/packages-ruby
+                  mg/packages-dotnet
+                  mg/packages-web
+                  mg/packages-ethereum
+                  mg/packages-go
+                  mg/packages-javascript
+                  ))))
+    (write-region "" nil last-load-file nil t)
+    (message "created timestamp file")))
 (provide 'packages)
 ;;; packages.el ends here

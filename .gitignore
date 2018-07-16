@@ -3,3 +3,4 @@ abbrev_defs
 auto-save-list
 eshell/
 tramp
+.last-load.packages.el
