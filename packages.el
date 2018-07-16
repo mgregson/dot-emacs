@@ -76,7 +76,8 @@
     golint))
 
 (defvar mg/packages-javascript
-  '(js2-mode))
+  '(js2-mode
+    vue-mode))
 
 (defvar mg/packages-core
   '(bbdb
