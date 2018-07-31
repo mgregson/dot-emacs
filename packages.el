@@ -48,7 +48,8 @@
     ghci-completion
     company-ghc
     flycheck-haskell
-    flymake-haskell-multi))
+    flymake-haskell-multi
+    intero))
 
 (defvar mg/packages-web
   '(sass-mode
@@ -99,11 +100,14 @@
     yaml-mode
     json-mode
     el-get
-    markdown-mode+))
+    markdown-mode+
+    use-package))
 
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives
+	     '("marmalade" . "https://marmalade-repo.org/packages/") t)
 
 (let ((last-load-file (expand-file-name "~/.emacs.d/.last-load.packages.el"))
       (current-day (time-to-days (current-time))))
@@ -133,5 +137,7 @@
                   ))))
     (write-region "" nil last-load-file nil t)
     (message "created timestamp file")))
+
+(require 'use-package)
 (provide 'packages)
 ;;; packages.el ends here

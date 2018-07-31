@@ -40,7 +40,7 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 
 (add-hook 'inferior-haskell-mode-hook 'ghci-completion-mode)
-(add-hook 'haskell-mode-hook 'haskell-indent-mode)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
 (add-hook 'cider-mode-hook 'subword-mode)
 (add-hook 'clojure-mode-hook 'cider-mode)
@@ -78,6 +78,31 @@
 
 (add-hook 'flycheck-mode-hook #'mg/solidity-paths-from-node-modules)
 (add-hook 'flycheck-mode-hook #'mg/eslint-paths-from-node-modules)
+
+(use-package intero
+             :defer t
+             :diminish " λ"
+  :bind (:map intero-mode-map
+              ("M-." . init-intero-goto-definition))
+  :init
+  (progn
+    (defun init-intero ()
+      "Enable Intero unless visiting a cached dependency."
+      (if (and buffer-file-name
+               (string-match ".+/\\.\\(stack\\|stack-work\\)/.+" buffer-file-name))
+          (progn
+            (eldoc-mode -1)
+            (flycheck-mode -1))
+        (intero-mode)
+        (setq projectile-tags-command "codex update")))
+    (add-hook 'haskell-mode-hook #'init-intero))
+  :config
+  (progn
+    (defun init-intero-goto-definition ()
+      "Jump to the definition of the thing at point using Intero or etags."
+      (interactive)
+      (or (intero-goto-definition)
+          (find-tag (find-tag-default))))))
 
 (provide 'init)
 ;;; init ends here
