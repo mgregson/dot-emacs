@@ -4,3 +4,4 @@ auto-save-list
 eshell/
 tramp
 .last-load.packages.el
+network-security.data
