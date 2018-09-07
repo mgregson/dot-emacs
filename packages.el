@@ -78,7 +78,11 @@
 
 (defvar mg/packages-javascript
   '(js2-mode
-    vue-mode))
+    vue-mode
+    psc-ide
+    psci
+    purescript-mode
+    flycheck-purescript))
 
 (defvar mg/packages-core
   '(bbdb
