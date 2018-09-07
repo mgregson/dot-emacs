@@ -78,6 +78,11 @@
 
 (add-hook 'flycheck-mode-hook #'mg/solidity-paths-from-node-modules)
 (add-hook 'flycheck-mode-hook #'mg/eslint-paths-from-node-modules)
+(add-hook 'flycheck-mode-hook #'flycheck-elm-setup)
+
+(add-hook 'elm-mode-hook
+          (lambda ()
+            (setq company-backends '(company-elm))))
 
 (use-package intero
              :defer t

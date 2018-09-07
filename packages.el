@@ -51,6 +51,10 @@
     flymake-haskell-multi
     intero))
 
+(defvar mg/packages-elm
+  '(elm-mode
+    flycheck-elm))
+
 (defvar mg/packages-web
   '(sass-mode
     scss-mode
@@ -126,6 +130,7 @@
                   mg/packages-c
                   mg/packages-idl
                   mg/packages-haskell
+                  mg/packages-elm
                   mg/packages-data
                   mg/packages-ops
                   mg/packages-ruby
