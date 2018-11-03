@@ -44,6 +44,9 @@
 (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
 (add-hook 'cider-mode-hook 'subword-mode)
 (add-hook 'clojure-mode-hook 'cider-mode)
+(add-hook 'solidity-mode-hook
+          (lambda ()
+            (setq-local c-basic-offset 4)))
 
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 

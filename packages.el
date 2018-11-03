@@ -88,6 +88,10 @@
     purescript-mode
     flycheck-purescript))
 
+(defvar mg/packages-devops
+  '(terraform-mode
+    company-terraform))
+
 (defvar mg/packages-core
   '(bbdb
     org
@@ -109,7 +113,8 @@
     json-mode
     el-get
     markdown-mode+
-    use-package))
+    use-package
+    restclient))
 
 (require 'package)
 (add-to-list 'package-archives
@@ -143,6 +148,7 @@
                   mg/packages-ethereum
                   mg/packages-go
                   mg/packages-javascript
+                  mg/packages-devops
                   ))))
     (write-region "" nil last-load-file nil t)
     (message "created timestamp file")))
