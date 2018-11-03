@@ -78,7 +78,8 @@
 
 (add-hook 'flycheck-mode-hook #'mg/solidity-paths-from-node-modules)
 (add-hook 'flycheck-mode-hook #'mg/eslint-paths-from-node-modules)
-(add-hook 'flycheck-mode-hook #'flycheck-elm-setup)
+(if (fboundp 'flycheck-elm-setup)
+    (add-hook 'flycheck-mode-hook #'flycheck-elm-setup))
 
 (add-hook 'elm-mode-hook
           (lambda ()
