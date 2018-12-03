@@ -86,6 +86,7 @@
     psc-ide
     psci
     purescript-mode
+    tide
     flycheck-purescript))
 
 (defvar mg/packages-devops

@@ -40,7 +40,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (company-terraform terraform-mode restclient psc-ide-emacs psci flycheck-purescript purescript-mode psc-ide elm-oracle flycheck-elm elm-mode use-package intero nix-mode vue-mode js2-mode golint flymake-go go-tag go-add-tags go-imports go-dlv company-go go-mode flymake-solidity solidity-mode cider php-mode markdown-mode+ el-get json-mode yaml-mode dired-toggle-sudo dired-toggle flymake-easy flycheck flyspell-lazy gitignore-mode gitconfig-mode gist magit company css-eldoc scss-mode sass-mode csharp-mode company-inf-ruby nginx-mode erc-hl-nicks csv-mode ess flymake-haskell-multi flycheck-haskell company-ghc ghci-completion ghc haskell-mode protobuf-mode thrift company-c-headers c-eldoc sbt-mode scala-mode dropdown-list bbdb)))
+    (tide company-terraform terraform-mode restclient psc-ide-emacs psci flycheck-purescript purescript-mode psc-ide elm-oracle flycheck-elm elm-mode use-package intero nix-mode vue-mode js2-mode golint flymake-go go-tag go-add-tags go-imports go-dlv company-go go-mode flymake-solidity solidity-mode cider php-mode markdown-mode+ el-get json-mode yaml-mode dired-toggle-sudo dired-toggle flymake-easy flycheck flyspell-lazy gitignore-mode gitconfig-mode gist magit company css-eldoc scss-mode sass-mode csharp-mode company-inf-ruby nginx-mode erc-hl-nicks csv-mode ess flymake-haskell-multi flycheck-haskell company-ghc ghci-completion ghc haskell-mode protobuf-mode thrift company-c-headers c-eldoc sbt-mode scala-mode dropdown-list bbdb)))
  '(password-cache-expiry 300)
  '(running-xemacs f)
  '(safe-local-variable-values
