@@ -51,6 +51,12 @@
     flymake-haskell-multi
     intero))
 
+(defvar mg/packages-rust
+  '(rust-mode
+    flymake-rust
+    racer
+    cargo))
+
 (defvar mg/packages-elm
   '(elm-mode
     flycheck-elm))
@@ -150,6 +156,7 @@
                   mg/packages-go
                   mg/packages-javascript
                   mg/packages-devops
+                  mg/packages-rust
                   ))))
     (write-region "" nil last-load-file nil t)
     (message "created timestamp file")))
