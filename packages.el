@@ -64,7 +64,8 @@
 (defvar mg/packages-web
   '(sass-mode
     scss-mode
-    css-eldoc))
+    css-eldoc
+    web-mode))
 
 (defvar mg/packages-ruby
   '(company-inf-ruby))
@@ -83,7 +84,6 @@
     go-imports
     go-add-tags
     go-tag
-    flymake-go
     golint))
 
 (defvar mg/packages-javascript
