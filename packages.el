@@ -53,6 +53,7 @@
 
 (defvar mg/packages-rust
   '(rust-mode
+    flycheck-rust
     flymake-rust
     racer
     cargo))
