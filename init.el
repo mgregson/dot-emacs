@@ -57,6 +57,7 @@
 (add-hook 'rust-mode-hook #'flycheck-rust-setup)
 
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.svelte?\\'" . web-mode))
 
 (defun mg/solidity-paths-from-node-modules ()
   "Configure solidity paths relative to the project directory (in node_modules)."
