@@ -28,6 +28,7 @@
  '(guru-global-mode nil)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
+ '(intero-package-version "0.1.40")
  '(jde-jdk-registry
    (quote
     (("sun-jdk-1.6" . "/opt/sun-jdk-1.6.0.16")
