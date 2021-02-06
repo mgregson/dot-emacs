@@ -49,7 +49,8 @@
  '(rust-indent-offset 2)
  '(safe-local-variable-values
    (quote
-    ((eval setq flycheck-solidity-solium-soliumrcfile
+    ((intero-targets "est:exe:est" "est:test:est-test")
+     (eval setq flycheck-solidity-solium-soliumrcfile
            (expand-file-name ".soliumrc.json"
                              (let
                                  ((d
@@ -146,6 +147,8 @@
  '(typescript-indent-level 2)
  '(user-mail-address "mgregson")
  '(vc-delete-logbuf-window nil)
+ '(web-mode-attr-indent-offset 2)
+ '(web-mode-attr-value-indent-offset 2)
  '(web-mode-code-indent-offset 2)
  '(web-mode-css-indent-offset 2)
  '(web-mode-markup-indent-offset 2)

@@ -58,6 +58,7 @@
 
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.svelte?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
 
 (defun mg/solidity-paths-from-node-modules ()
   "Configure solidity paths relative to the project directory (in node_modules)."
