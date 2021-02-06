@@ -146,6 +146,9 @@
  '(typescript-indent-level 2)
  '(user-mail-address "mgregson")
  '(vc-delete-logbuf-window nil)
+ '(web-mode-code-indent-offset 2)
+ '(web-mode-css-indent-offset 2)
+ '(web-mode-markup-indent-offset 2)
  '(wl-message-id-domain ""))
 
 (when window-system
