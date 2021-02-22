@@ -32,7 +32,8 @@
 (defvar mg/packages-ops
   '(erc-hl-nicks
     nginx-mode
-    nix-mode))
+    nix-mode
+    nix-buffer))
 
 (defvar mg/packages-data
   '(ess
@@ -126,7 +127,7 @@
 
 (require 'package)
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+             '("melpa" . "https://melpa.org/packages/") t)
 (add-to-list 'package-archives
 	     '("marmalade" . "https://marmalade-repo.org/packages/") t)
 
