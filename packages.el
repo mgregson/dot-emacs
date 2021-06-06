@@ -123,7 +123,8 @@
     el-get
     markdown-mode+
     use-package
-    restclient))
+    restclient
+    direnv))
 
 (require 'package)
 (add-to-list 'package-archives
