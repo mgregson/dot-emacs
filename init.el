@@ -152,5 +152,29 @@
 ;; enable typescript-tslint checker
 (flycheck-add-mode 'typescript-tslint 'web-mode)
 
+(nix-buffer)
+
+(defun mgregson/python-nix-buffer-around (orig-fun &rest args)
+  "Allow ORIG-FUN to find various python interpreters as set by nix-buffer.  ARGS is ignored."
+  (let ((python-shell-interpreter (executable-find "python")))
+    (funcall orig-fun)))
+
+(defun mgregson/wrap-nix-buffer (sym)
+  "Add mgregson/python-nix-buffer-around as an :around advice on SYM."
+  (advice-add sym :around 'mgregson/python-nix-buffer-around))
+
+(defun mgregson/wrap-all-nix-buffer (list)
+  "Call mgregson/wrap-nix-buffer on each element of LIST."
+  (while list
+    (mgregson/wrap-nix-buffer (car list))
+    (setq list (cdr list))))
+
+(mgregson/wrap-all-nix-buffer
+ '(python-flake8
+   python-flymake-command
+   python-pycompile
+   python-pylint))
+
+(direnv-mode)
 (provide 'init)
 ;;; init ends here
