@@ -5,3 +5,5 @@ eshell/
 tramp
 .last-load.packages.el
 network-security.data
+url/
+nix-buffer/
