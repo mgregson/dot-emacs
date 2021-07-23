@@ -15,6 +15,7 @@
      (other . "gnu")))
  '(cider-prefer-local-resources t)
  '(column-number-mode t)
+ '(dante-repl-command-line '("stack" "repl" dante-target))
  '(delete-autosave-files t)
  '(dired-use-ls-dired nil)
  '(display-time-mode t)
@@ -40,7 +41,7 @@
  '(markdown-command "pandoc")
  '(menu-bar-mode nil)
  '(package-selected-packages
-   '(password-store-otp direnv nix-buffer web-mode smartparens jsonrpc flycheck-rust cargo racer flymake-rust rust-mode tide company-terraform terraform-mode restclient psc-ide-emacs psci flycheck-purescript purescript-mode psc-ide elm-oracle flycheck-elm elm-mode use-package intero nix-mode vue-mode js2-mode golint go-tag go-add-tags go-imports go-dlv company-go go-mode flymake-solidity solidity-mode cider php-mode markdown-mode+ el-get json-mode yaml-mode dired-toggle-sudo dired-toggle flymake-easy flycheck flyspell-lazy gitignore-mode gitconfig-mode gist magit company css-eldoc scss-mode sass-mode csharp-mode company-inf-ruby nginx-mode erc-hl-nicks csv-mode ess flymake-haskell-multi flycheck-haskell company-ghc ghci-completion ghc haskell-mode protobuf-mode thrift company-c-headers c-eldoc sbt-mode scala-mode dropdown-list bbdb))
+   '(password-store-otp dante direnv nix-buffer web-mode smartparens jsonrpc flycheck-rust cargo racer flymake-rust rust-mode tide company-terraform terraform-mode restclient psc-ide-emacs psci flycheck-purescript purescript-mode psc-ide elm-oracle flycheck-elm elm-mode use-package intero nix-mode vue-mode js2-mode golint go-tag go-add-tags go-imports go-dlv company-go go-mode flymake-solidity solidity-mode cider php-mode markdown-mode+ el-get json-mode yaml-mode dired-toggle-sudo dired-toggle flymake-easy flycheck flyspell-lazy gitignore-mode gitconfig-mode gist magit company css-eldoc scss-mode sass-mode csharp-mode company-inf-ruby nginx-mode erc-hl-nicks csv-mode ess flymake-haskell-multi flycheck-haskell company-ghc ghci-completion ghc haskell-mode protobuf-mode thrift company-c-headers c-eldoc sbt-mode scala-mode dropdown-list bbdb))
  '(password-cache-expiry 300)
  '(python-shell-interpreter "/nix/var/nix/profiles/default/bin/nix-shell")
  '(running-xemacs f)
