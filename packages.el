@@ -50,7 +50,7 @@
     company-ghc
     flycheck-haskell
     flymake-haskell-multi
-    intero))
+    dante))
 
 (defvar mg/packages-rust
   '(rust-mode
