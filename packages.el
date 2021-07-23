@@ -124,7 +124,9 @@
     markdown-mode+
     use-package
     restclient
-    direnv))
+    direnv
+    password-store-otp
+    pass))
 
 (require 'package)
 (add-to-list 'package-archives
