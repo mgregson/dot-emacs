@@ -98,36 +98,18 @@
           (lambda ()
             (setq company-backends '(company-elm))))
 
-(use-package dante
-  :ensure t
-  :after haskell-mode
-  :commands 'dante-mode
-  :init (add-hook 'haskell-mode-hook 'flycheck-mode)
-  (add-hook 'haskell-mode-hook 'dante-mode))
-;; (use-package intero
-;;              :defer t
-;;              :diminish " λ"
-;;   :bind (:map intero-mode-map
-;;               ("M-." . init-intero-goto-definition))
-;;   :init
-;;   (progn
-;;     (defun init-intero ()
-;;       "Enable Intero unless visiting a cached dependency."
-;;       (if (and buffer-file-name
-;;                (string-match ".+/\\.\\(stack\\|stack-work\\)/.+" buffer-file-name))
-;;           (progn
-;;             (eldoc-mode -1)
-;;             (flycheck-mode -1))
-;;         (intero-mode)
-;;         (setq projectile-tags-command "codex update")))
-;;     (add-hook 'haskell-mode-hook #'init-intero))
-;;   :config
-;;   (progn
-;;     (defun init-intero-goto-definition ()
-;;       "Jump to the definition of the thing at point using Intero or etags."
-;;       (interactive)
-;;       (or (intero-goto-definition)
-;;           (find-tag (find-tag-default))))))
+(use-package lsp-mode
+  :hook (haskell-mode . lsp)
+  :commands lsp)
+
+(use-package lsp-ui
+  :commands lsp-ui-mode)
+
+(use-package lsp-haskell
+  :config (setq lsp-haskell-server-path "haskell-language-server-wrapper")
+          (setq lsp-haskell-server-args ()))
+
+(use-package haskell-mode)
 
 (defun setup-tide-mode ()
   (interactive)
@@ -182,5 +164,8 @@
    python-pylint))
 
 (direnv-mode)
+
+(add-hook 'haskell-mode-hook 'interactive-haskell-mode)
+
 (provide 'init)
 ;;; init ends here

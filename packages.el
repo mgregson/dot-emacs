@@ -50,7 +50,7 @@
     company-ghc
     flycheck-haskell
     flymake-haskell-multi
-    dante))
+    lsp-haskell))
 
 (defvar mg/packages-rust
   '(rust-mode
@@ -126,7 +126,9 @@
     restclient
     direnv
     password-store-otp
-    pass))
+    pass
+    lsp-mode
+    lsp-ui))
 
 (require 'package)
 (add-to-list 'package-archives
