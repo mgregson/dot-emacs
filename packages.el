@@ -45,9 +45,7 @@
 
 (defvar mg/packages-haskell
   '(haskell-mode
-    ghc
     ghci-completion
-    company-ghc
     flycheck-haskell
     flymake-haskell-multi
     lsp-haskell))
@@ -55,7 +53,6 @@
 (defvar mg/packages-rust
   '(rust-mode
     flycheck-rust
-    flymake-rust
     racer
     cargo))
 
@@ -94,8 +91,7 @@
     psc-ide
     psci
     purescript-mode
-    tide
-    flycheck-purescript))
+    tide))
 
 (defvar mg/packages-devops
   '(terraform-mode
@@ -110,8 +106,6 @@
     magit
     eldoc
     gist
-    gitconfig-mode
-    gitignore-mode
     flyspell
     flyspell-lazy
     flycheck
@@ -121,7 +115,6 @@
     yaml-mode
     json-mode
     el-get
-    markdown-mode+
     use-package
     restclient
     direnv
