@@ -8,3 +8,4 @@ network-security.data
 url/
 nix-buffer/
 transient/
+.lsp-session*
