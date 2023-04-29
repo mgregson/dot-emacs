@@ -121,7 +121,9 @@
     password-store-otp
     pass
     lsp-mode
-    lsp-ui))
+    lsp-ui
+    ledger-mode
+    hledger-mode))
 
 (require 'package)
 (add-to-list 'package-archives
