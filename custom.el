@@ -4,6 +4,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(auth-source-save-behavior nil)
+ '(auth-sources
+   '("~/.authinfo" "~/.authinfo.gpg" "~/.netrc"
+     '(password-store)))
  '(backup-directory-alist '(("." . "/tmp/")))
  '(c-basic-offset 2)
  '(c-default-style
@@ -45,11 +48,12 @@
      ("account" "%(binary) -f %(ledger-file) reg %(account)")))
  '(load-prefer-newer t)
  '(longlines-auto-wrap nil)
+ '(lsp-haskell-server-path "haskell-language-server")
  '(make-backup-files nil)
  '(markdown-command "pandoc")
  '(menu-bar-mode nil)
  '(package-selected-packages
-   '(hledger-mode ledger-mode lsp-haskell lsp-ui lsp-mode pass password-store-otp dante direnv nix-buffer web-mode smartparens jsonrpc flycheck-rust cargo racer flymake-rust rust-mode tide company-terraform terraform-mode restclient psc-ide-emacs psci flycheck-purescript purescript-mode psc-ide elm-oracle flycheck-elm elm-mode use-package intero nix-mode vue-mode js2-mode golint go-tag go-add-tags go-imports go-dlv company-go go-mode flymake-solidity solidity-mode cider php-mode markdown-mode+ el-get json-mode yaml-mode dired-toggle-sudo dired-toggle flymake-easy flycheck flyspell-lazy gitignore-mode gitconfig-mode gist magit company css-eldoc scss-mode sass-mode csharp-mode company-inf-ruby nginx-mode erc-hl-nicks csv-mode ess flymake-haskell-multi flycheck-haskell company-ghc ghci-completion ghc haskell-mode protobuf-mode thrift company-c-headers c-eldoc sbt-mode scala-mode dropdown-list bbdb))
+   '(polymode helm-gitlab helm gitlab hledger-mode ledger-mode lsp-haskell lsp-ui lsp-mode pass password-store-otp dante direnv nix-buffer web-mode smartparens jsonrpc flycheck-rust cargo racer flymake-rust rust-mode tide company-terraform terraform-mode restclient psc-ide-emacs psci flycheck-purescript purescript-mode psc-ide elm-oracle flycheck-elm elm-mode use-package intero nix-mode vue-mode js2-mode golint go-tag go-add-tags go-imports go-dlv company-go go-mode flymake-solidity solidity-mode cider php-mode markdown-mode+ el-get json-mode yaml-mode dired-toggle-sudo dired-toggle flymake-easy flycheck flyspell-lazy gitignore-mode gitconfig-mode gist magit company css-eldoc scss-mode sass-mode csharp-mode company-inf-ruby nginx-mode erc-hl-nicks csv-mode ess flymake-haskell-multi flycheck-haskell company-ghc ghci-completion ghc haskell-mode protobuf-mode thrift company-c-headers c-eldoc sbt-mode scala-mode dropdown-list bbdb))
  '(password-cache-expiry 300)
  '(python-shell-interpreter "/nix/var/nix/profiles/default/bin/nix-shell")
  '(running-xemacs f)
@@ -153,6 +157,7 @@
  '(typescript-indent-level 2)
  '(user-mail-address "mgregson")
  '(vc-delete-logbuf-window nil)
+ '(warning-suppress-types '((comp)))
  '(web-mode-attr-indent-offset 2)
  '(web-mode-attr-value-indent-offset 2)
  '(web-mode-code-indent-offset 2)

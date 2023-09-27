@@ -99,8 +99,13 @@
             (setq company-backends '(company-elm))))
 
 (use-package lsp-mode
-  :hook (haskell-mode . lsp)
-  :commands lsp)
+  :hook (prog-mode . lsp-mode)
+
+  :config
+  ;; This is to make `lsp-mode' work with `direnv' and pick up the correct
+  ;; version of GHC.
+  (advice-add 'lsp :before #'direnv-update-environment)
+  (setq lsp-modeline-code-actions-enable nil))
 
 (use-package lsp-ui
   :commands lsp-ui-mode)
@@ -166,6 +171,7 @@
 (direnv-mode)
 
 (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
+(add-hook 'haskell-mode-hook #'direnv-update-environment)
 
 (provide 'init)
 ;;; init ends here
