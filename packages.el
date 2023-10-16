@@ -5,10 +5,7 @@
   "Ensure that each package in the given list of PACKAGES is installed."
   (mapcar
    (lambda (package)
-     (if (package-installed-p package)
-         (require package)
-       (package-install package)
-       (require package)))
+     (straight-use-package package))
    packages))
 
 (defvar mg/packages-python
@@ -100,6 +97,7 @@
 (defvar mg/packages-core
   '(bbdb
     org
+    polymode
     cl-lib
     tramp
     company
@@ -114,7 +112,6 @@
     dired-toggle-sudo
     yaml-mode
     json-mode
-    el-get
     use-package
     restclient
     direnv
@@ -123,7 +120,8 @@
     lsp-mode
     lsp-ui
     ledger-mode
-    hledger-mode))
+    hledger-mode
+    '(tla-tools :type git :host github :repo "mrc/tla-tools")))
 
 (require 'package)
 (add-to-list 'package-archives
