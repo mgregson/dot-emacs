@@ -32,6 +32,10 @@
        "org.el"
        "util.el"))
 
+(defun seq-keep (function sequence)
+  "Apply FUNCTION to SEQUENCE and return the list of all the non-nil results."
+  (delq nil (seq-map function sequence)))
+
 (global-company-mode)
 (global-flycheck-mode)
 (with-eval-after-load 'company
@@ -70,7 +74,6 @@
 (add-hook 'rust-mode-hook #'flycheck-rust-setup)
 
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-(add-to-list 'auto-mode-alist '("\\.ts\\'" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.svelte?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
 
@@ -129,6 +132,17 @@
           (setq lsp-haskell-server-args ()))
 
 (use-package haskell-mode)
+
+(use-package tree-sitter
+  :config
+  (global-tree-sitter-mode)
+  (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode))
+
+(use-package tree-sitter-langs
+  :after tree-sitter)
+
+(use-package typescript-mode
+  :after tree-sitter)
 
 (defun setup-tide-mode ()
   (interactive)
