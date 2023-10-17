@@ -48,6 +48,7 @@
      ("account" "%(binary) -f %(ledger-file) reg %(account)")))
  '(load-prefer-newer t)
  '(longlines-auto-wrap nil)
+ '(lsp-clients-typescript-prefer-use-project-ts-server t)
  '(lsp-haskell-server-path "haskell-language-server")
  '(make-backup-files nil)
  '(markdown-command "pandoc")
