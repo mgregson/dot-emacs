@@ -50,6 +50,7 @@
  '(longlines-auto-wrap nil)
  '(lsp-clients-typescript-prefer-use-project-ts-server t)
  '(lsp-haskell-server-path "haskell-language-server")
+ '(lsp-headerline-breadcrumb-enable nil)
  '(make-backup-files nil)
  '(markdown-command "pandoc")
  '(menu-bar-mode nil)
