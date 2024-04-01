@@ -1,3 +1,7 @@
+;;; custom.el -- customizations
+;;; Commentary:
+;;;   Managed by Emacs
+;;; Code:
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -159,7 +163,8 @@
  '(typescript-indent-level 2)
  '(user-mail-address "mgregson")
  '(vc-delete-logbuf-window nil)
- '(warning-suppress-types '((comp)))
+ '(warning-suppress-log-types '((lsp-mode) (lsp-mode) (lsp-mode) (lsp-mode) (comp)))
+ '(warning-suppress-types '((lsp-mode) (lsp-mode) (lsp-mode) (comp)))
  '(web-mode-attr-indent-offset 2)
  '(web-mode-attr-value-indent-offset 2)
  '(web-mode-code-indent-offset 2)
@@ -182,3 +187,5 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "#343434" :foreground "gray90" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal :foundry "adobe" :family "courier")))))
+(provide 'custom)
+;;; custom.el ends here

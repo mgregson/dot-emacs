@@ -42,6 +42,7 @@
   (define-key company-active-map (kbd "M-n") nil)
   (define-key company-active-map (kbd "M-p") nil)
   (define-key company-active-map (kbd "<up>") nil)
+  (define-key company-active-map (kbd "<down>") nil)
   (define-key company-active-map (kbd "RET") nil)
   (define-key company-active-map [return] nil)
   (define-key company-active-map [tab] nil)
@@ -49,7 +50,12 @@
   (define-key company-active-map (kbd "TAB") nil)
   (define-key company-active-map (kbd "C-<down>") 'company-select-next)
   (define-key company-active-map (kbd "C-<up>") 'company-select-previous)
-  (define-key company-active-map (kbd "C-<return>") 'company-complete-selection))
+  (define-key company-active-map (kbd "M-TAB") 'company-complete-common)
+  (define-key company-active-map (kbd "M-RET") 'company-complete-selection))
+
+(with-eval-after-load 'lsp-ui-peek
+  (define-key lsp-ui-mode-map (kbd "M-.") #'lsp-ui-peek-find-definitions)
+  (define-key lsp-ui-mode-map [remap xref-find-references] #'lsp-ui-peek-find-references))
 
 (global-set-key (kbd "C-x j") 'dka/jump-to-window)
 (global-set-key (kbd "C-c r") 'org-capture)
@@ -202,4 +208,4 @@
 (add-hook 'haskell-mode-hook #'direnv-update-environment)
 
 (provide 'init)
-;;; init ends here
+;;; init.el ends here
