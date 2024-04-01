@@ -9,3 +9,9 @@ url/
 nix-buffer/
 transient/
 .lsp-session*
+.cache
+*.elc
+.DS_Store
+eln-cache
+request
+straight
